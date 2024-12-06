@@ -1,0 +1,53 @@
+@use '../abstracts/helpers' as *;
+
+
+.strength-bar-container {
+    @include container($max-width: 480px, $margin: 0 auto, $padding:  1rem);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: space-between);
+    background-color: #18171F;
+  }
+  
+  .strength-label {
+    @include text();
+  }
+  
+  .strength-bar {
+    @include container($max-width: 250px);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: center);
+
+
+  }
+  
+  .bar {
+    width: 10px;
+    height: 28px;
+    border: 1px solid $light-grey;
+    transition: background 0.3s ease;
+  
+    &.filled {
+      background: green; 
+    }
+  }
+
+
+
+
+
+@media (max-width: 475px) {
+    .strength-bar {
+        @include container($max-width: 140px);
+    }
+
+    .strength-bar p {
+        font-size: 0.75rem;
+    }
+
+    .strength-label {
+        font-size: 0.7rem;
+    }
+    
+    .bar {
+        width: 8px;
+    }
+}
+  

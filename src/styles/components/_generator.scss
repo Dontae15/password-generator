@@ -1,0 +1,95 @@
+@use '../abstracts/helpers' as *;
+
+.main-content h2 {
+    color: $medium-gray;
+}
+
+.password-display {
+    @include container($max-width: 540px, $margin: 0 auto, $padding: 1rem 2rem);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: space-between, $gap: 1rem);
+    background-color: $dark-gray;
+}
+
+#copy-btn {
+    border: none;
+    background: transparent;
+}
+
+#copy-btn img, #copy-btn img:hover {
+    @include container($max-width: 25px);
+    height: 24px;
+}
+
+
+.password-generator {
+    @include container($max-width: 540px, $margin: 0 auto, $padding: 1rem);
+    @include flex($flex-direction: column, $align-items: center, $justify-content: center, $gap: 1rem);
+    background-color: $dark-gray;
+}
+
+.password-length {
+    @include container($max-width: 480px);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: space-between, $gap: 1rem);
+}
+
+.password-length h1 {
+    color: $green-accent;
+}
+
+.password-specs {
+    @include container($max-width: 480px);
+    @include flex($flex-direction: column, $align-items: flex-start, $justify-content: center, $gap: 1rem);
+}
+
+
+.spec {
+    @include container($max-width: 320px);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: flex-start, $gap: 1rem);
+}
+
+.spec button {
+   background: transparent;
+}
+
+.spec button:hover {
+    border: 2px solid $green-accent;
+}
+
+
+.password-strength {
+    @include container($max-width: 480px, $margin: 0 auto);
+    @include flex($flex-direction: column, $align-items: center, $justify-content: center, $gap: 1rem);
+}
+
+.strength {
+    @include container($max-width: 480px, $margin: 0 auto, $padding: 1rem);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: space-between, $gap: 1rem);
+    background-color: #18171F;
+}
+
+
+#generate-password-btn {
+    @include container($max-width: 480px, $margin: 0 auto, $padding: 1rem);
+    @include flex($flex-direction: row, $align-items: center, $justify-content: center, $gap: 1rem);
+    background-color: $green-accent;
+    cursor: pointer;
+    border: none;
+}
+
+#generate-password-btn img {
+    @include container($max-width: 12px);
+    height: 12px;
+}
+
+#generate-password-btn p {
+    color: $dark-gray;
+}
+
+#generate-password-btn:hover {
+    background: transparent;
+    border: 2px solid $green-accent;
+}
+
+#generate-password-btn:hover p {
+    color: $green-accent;
+}
